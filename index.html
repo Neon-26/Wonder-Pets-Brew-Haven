@@ -10,6 +10,9 @@
 <body>
     <header class="header">
         <div class="container">
+                <div class="cat-5">
+                    <img src="cat5.png" alt="Cat">
+                </div>
             <div class="header-content">
                 <div class="logo-section">
                     <img src="logo.png" alt="Logo" class="logo">
@@ -26,8 +29,16 @@
                     </ul>
                 </nav>
                 <div class="right-controls">
-                    <input type="text" class="search-box" placeholder="search" />
-                    <div class="cart">🧺</div>
+                    <div class="user-profile">
+                        <div class="user-icon" onclick="toggleUserMenu()">
+                            <img src="profile.png" alt="profile">
+                        </div>
+                        <div class="user-menu" id="user-menu">
+                            <a href="#" onclick="viewOrders()">My Orders</a>
+                            <a href="#" onclick="logout()">Log Out</a>
+                        </div>
+                    </div>
+                        <div class="cart">🧺</div>
                 </div>
             </div>
         </div>
@@ -44,167 +55,310 @@
 
     <section id="menu" class="menu">
         <div class="container">
-        <h1 class="page-title">Our Paw-some Menu</h1>
-        
-        <div class="menu-layout">
-            <div class="menu-sidebar">
-                <div class="sidebar-content">
-                    <h2 class="sidebar-title">Categories</h2>
-                    <ul class="category-list">
-                        <li><a href="#coffee" class="category-link active">Coffee</a></li>
-                        <li><a href="#tea" class="category-link">Tea</a></li>
-                        <li><a href="#pets" class="category-link">Pet Treats</a></li>
-                    </ul>
+            <h1 class="page-title">Our Paw-some Menu</h1>
+                <div class="cat-8">
+                    <img src="cat8.png" alt="Cat">
                 </div>
-            </div>
-            
-            <div class="menu-content">
-                <section id="coffee" class="menu-section">
-                    <h2 class="section-title">Coffee</h2>
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <img src="Puppuccino.png" alt="Puppuccino" class="item-image">
-                            <div class="item-details">
-                                <h3 class="item-title">Puppuccino</h3>
-                                <p class="item-description">Whipped cream delight for your pup</p>
-                                <div class="item-footer">
-                                    <span class="item-price">₱999.99</span>
-                                    <button class="add-to-cart-button" data-name="Puppuccino" data-price="3.99">Add</button>
-                                </div>
-                            </div>
+            <div class="menu-layout">
+                <div class="menu-sidebar">
+                    <div class="sidebar-content">
+                        <div class="hang1">
+                            <img src="hang.png" alt="leaves">
                         </div>
-
-                        <div class="menu-item">
-                            <img src="bark brew.png" alt="Bark Brew" class="item-image">
-                            <div class="item-details">
-                                <h3 class="item-title">Bark Brew</h3>
-                                <p class="item-description">Cold brew with bacon-infused foam</p>
-                                <div class="item-footer">
-                                    <span class="item-price">₱599.99</span>
-                                    <button class="add-to-cart-button" data-name="Bark Brew" data-price="5.99">Add</button>
-                                </div>
-                            </div>
+                        <div class="hang2">
+                            <img src="hang.png" alt="leaves">
+                        </div>                    
+                        <div class="leaves">
+                            <img src="leaves.png" alt="leaves">
                         </div>
+                        <h2 class="sidebar-title">Categories</h2>
+                        <ul class="category-list">
+                            <li><a href="#coffee" class="category-link active">Coffee</a></li>
+                            <li><a href="#tea" class="category-link">Pastry</a></li>
+                            <li><a href="#pets" class="category-link">Pet Treats</a></li>
+                        </ul>
                     </div>
-                </section>
+                </div>
+                
+                <div class="menu-content">
+                    <section id="coffee" class="menu-section" style="display: block;">
+                        <h2 class="section-title">Coffee</h2>
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <img src="Puppuccino.png" alt="Puppuccino" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Puppuccino</h3>
+                                    <p class="item-description">Whipped cream delight for your pup.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱999.99</span>
+                                        <button class="add-to-cart-button" data-name="Puppuccino" data-price="999.99" data-customize="true">Add</button>
+                                    </div>
+                                </div>
+                            </div>
 
-                <section id="tea" class="menu-section">
-                    <h2 class="section-title">Tea</h2>
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <img src="Meow cha.png" alt="Meow-cha Latte" class="item-image">
-                            <div class="item-details">
-                                <h3 class="item-title">Meow-cha Latte</h3>
-                                <p class="item-description">Green tea latte with catnip sprinkles</p>
-                                <div class="item-footer">
-                                    <span class="item-price">₱1,999.99</span>
-                                    <button class="add-to-cart-button" data-name="Meow-cha Latte" data-price="4.99">Add</button>
+                            <div class="menu-item">
+                                <img src="bark brew.png" alt="Bark Brew" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Bark Brew</h3>
+                                    <p class="item-description">Cold brew with bacon-infused foam.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱599.99</span>
+                                        <button class="add-to-cart-button" data-name="Bark Brew" data-price="599.99" data-customize="true">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="Linny’s Heroic Hot Chocolate.png" alt="Linny’s Heroic Hot Chocolate" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Linny’s Heroic Hot Chocolate</h3>
+                                    <p class="item-description">Rich and warm chocolate drink topped.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱299.99</span>
+                                        <button class="add-to-cart-button" data-name="Linny’s Heroic Hot Chocolate" data-price="299.99" data-customize="true">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="Save-the-Day Caramel Macchiato.png" alt="Save-the-Day Caramel Macchiato" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Save-the-Day Caramel Macchiato</h3>
+                                    <p class="item-description">Sweet caramel layered with silky espresso.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱199.99</span>
+                                        <button class="add-to-cart-button" data-name="Save-the-Day Caramel Macchiato" data-price="199.99" data-customize="true">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="Teamwork Mocha Magic.png" alt="Teamwork Mocha Magic" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Teamwork Mocha Magic</h3>
+                                    <p class="item-description">A chocolate-coffee blend that tastes like teamwork.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱399.99</span>
+                                        <button class="add-to-cart-button" data-name="Teamwork Mocha Magic" data-price="399.99" data-customize="true">Add</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </section>
+
+                    <section id="tea" class="menu-section" style="display: none;">
+                        <h2 class="section-title">Pastry</h2>
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <img src="Linny’s Creamy Cozy Danish.png" alt="Linny’s Creamy Cozy Danish" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Linny’s Creamy Cozy Danish</h3>
+                                    <p class="item-description">A golden, flaky pastry filled with soft, dreamy cream.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱1,999.99</span>
+                                        <button class="add-to-cart-button" data-name="Linny’s Creamy Cozy Danish" data-price="1,999.99">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="Ming-Ming’s Berry Sweet Swirl.png" alt="Ming-Ming’s Berry Sweet Swirl" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Ming-Ming’s Berry Sweet Swirl</h3>
+                                    <p class="item-description">A fluffy round Danish with a bright strawberry center.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱4,999.99</span>
+                                        <button class="add-to-cart-button" data-name="Ming-Ming’s Berry Sweet Swirl" data-price="4,999.99">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="Tuck’s Crunchy Puff Clusters.png" alt="Tuck’s Crunchy Puff Clusters" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Tuck’s Crunchy Puff Clusters</h3>
+                                    <p class="item-description">Sugary, crispy pastry bites baked together in a cozy muffin wrap.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱1,999.99</span>
+                                        <button class="add-to-cart-button" data-name="Tuck’s Crunchy Puff Clusters" data-price="1,999.99">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="Ming-Ming’s Quack-Tastic Chocolate Muffin.png" alt="Ming-Ming’s Quack-Tastic Chocolate Muffin" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Ming-Ming’s Quack-Tastic Chocolate Muffin</h3>
+                                    <p class="item-description">Rich chocolate muffin with a fun quacky twist.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱1,999.99</span>
+                                        <button class="add-to-cart-button" data-name="Ming-Ming’s Quack-Tastic Chocolate Muffin" data-price="1,999.99">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="pets" class="menu-section" style="display: none;">
+                        <h2 class="section-title">Pet Treats</h2>
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <img src="Paw-some Biscuit.webp" alt="Paw-some Biscuit" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Paw-some Biscuit</h3>
+                                    <p class="item-description">Homemade biscuit for your furry friend.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱299.99</span>
+                                        <button class="add-to-cart-button" data-name="Paw-some Biscuit" data-price="299.99">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="Ming-Ming’s Quacky Chew Nibbles.webp" alt="Quacky Chew Nibbles" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Quacky Chew Nibbles</h3>
+                                    <p class="item-description">Soft, chewy treats that make tails wag and whiskers wiggle.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱399.99</span>
+                                        <button class="add-to-cart-button" data-name="Quacky Chew Nibbles" data-price="399.99">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="Tuck’s Turtle Crunch Bites.jpg" alt="Crunch Bites" class="item-image">
+                                <div class="item-details">
+                                    <h3 class="item-title">Crunch Bites</h3>
+                                    <p class="item-description">Cute treats with a satisfying crunch.</p>
+                                    <div class="item-footer">
+                                        <span class="item-price">₱499.99</span>
+                                        <button class="add-to-cart-button" data-name="Crunch Bites" data-price="499.99">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-        <div class="about-container">
-            <h1 class="page-title">About</h1>
-            
-            <div class="story-section">
-                <img src="11.jpg" alt="Our cafe" class="story-image">
-                <div class="story-content">
-                    <h2 class="section-title">Our Story</h2>
-                    <p class="story-text">WonderPets Brew Haven was founded in 2025 by a group of animal lovers who also happened to be coffee enthusiasts. We noticed that there weren't many places where pet owners could enjoy quality coffee while spending time with their furry friends.</p>
-                    <p class="story-text">Our mission is to create a welcoming space for both humans and animals, serving ethically-sourced coffee and homemade pet treats made with love and natural ingredients.</p>
+            <div class="about-container">
+                <h1 class="page-title">About</h1>
+                <div class="cat-6">
+                    <img src="cat6.png" alt="Cat">
                 </div>
-            </div>
-            </div>
-                        <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <h3 class="feature-title">☕ Our Coffee</h3>
+                <div class="story-section">
+                    <img src="11.jpg" alt="Our cafe" class="story-image">
+                    <div class="story-content">
+                        <h2 class="section-title">Our Story</h2>
+                        <p class="story-text">WonderPets Brew Haven was founded in 2025 by a group of animal lovers who also happened to be coffee enthusiasts. We noticed that there weren't many places where pet owners could enjoy quality coffee while spending time with their furry friends.</p>
+                        <p class="story-text">Our mission is to create a welcoming space for both humans and animals, serving ethically-sourced coffee and homemade pet treats made with love and natural ingredients.</p>
                     </div>
-                    <p class="feature-text">We partner with small sustainable farms around the world to bring you the freshest, most flavorful beans. All our coffee is roasted locally to ensure peak freshness.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <h3 class="feature-title">🐶 Pet Friendly</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-header">
+                            <h3 class="feature-title">☕ Our Coffee</h3>
+                        </div>
+                        <p class="feature-text">We partner with small sustainable farms around the world to bring you the freshest, most flavorful beans. All our coffee is roasted locally to ensure peak freshness.</p>
                     </div>
-                    <p class="feature-text">Our space is designed with pets in mind. We have special seating areas, water stations, and even a small play area for your furry companions.</p>
+                    
+                    <div class="feature-card">
+                        <div class="feature-header">
+                            <h3 class="feature-title">🐶 Pet Friendly</h3>
+                        </div>
+                        <p class="feature-text">Our space is designed with pets in mind. We have special seating areas, water stations, and even a small play area for your furry companions.</p>
+                    </div>
+                </div>
+
+                <div class="cat-4">
+                    <img src="cat4.png" alt="Cat">
+                </div>
+                <div class="dog-4">
+                    <img src="dog4.png" alt="Dog">
+                </div>
+                <div class="team-section">
+                    <h2 class="section-title">Meet the Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="kae.jpg" alt="Founder" class="team-photo">
+                            <h3 class="team-name">Kaela Imbao</h3>
+                            <p class="team-role">Founder & CEO</p>
+                            <p class="team-description">Dog lover and coffee connoisseur</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="castor.jpg" alt="Barista" class="team-photo">
+                            <h3 class="team-name">Elaiza Joy Castor</h3>
+                            <p class="team-role">Head Barista</p>
+                            <p class="team-description">Creates paw-some latte art</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="mi.webp" alt="Baker" class="team-photo">
+                            <h3 class="team-name">Elyza Dizon</h3>
+                            <p class="team-role">Pet Treat Chef</p>
+                            <p class="team-description">Makes treats pets go crazy for</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="denosta.jpg" alt="Founder" class="team-photo">
+                            <h3 class="team-name">Denosta Norwellyn Grace</h3>
+                            <p class="team-role">Smoothie & Cold Drinks Specialist</p>
+                            <p class="team-description">Makes refreshing iced coffees, frappes, and coolers.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="marisol.jpg" alt="Barista" class="team-photo">
+                            <h3 class="team-name">Marisol Plaquie Pagauitan</h3>
+                            <p class="team-role">Pastry & Snacks Expert</p>
+                            <p class="team-description">Handles muffins, cookies, cakes, and all the cute treats.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="me.jpg" alt="Baker" class="team-photo">
+                            <h3 class="team-name">Jericho Lejano</h3>
+                            <p class="team-role">Website Maintenance</p>
+                            <p class="team-description">Fixes buttons, links, and keeps everything running smoothly.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="james3.jpg" alt="Founder" class="team-photo">
+                            <h3 class="team-name">James Corporal</h3>
+                            <p class="team-role">Order Runner</p>
+                            <p class="team-description">Quickly delivers orders from the counter to the customers.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="calagos.jpg" alt="Barista" class="team-photo">
+                            <h3 class="team-name">Jheno Vien Calagos</h3>
+                            <p class="team-role">Checkout & Payments Master</p>
+                            <p class="team-description">Handles transactions and online orders with speed and cheer.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="rai.png" alt="Baker" class="team-photo">
+                            <h3 class="team-name">Rainiel John S. Pugoso</h3>
+                            <p class="team-role">Shop Tidiness Supervisor</p>
+                            <p class="team-description">Keeps everything clean, cozy, and shiny.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="team-section">
-                <h2 class="section-title">Meet the Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="kae.jpg" alt="Founder" class="team-photo">
-                        <h3 class="team-name">Kaela Imbao</h3>
-                        <p class="team-role">Founder & CEO</p>
-                        <p class="team-description">Dog lover and coffee connoisseur</p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <img src="castor.jpg" alt="Barista" class="team-photo">
-                        <h3 class="team-name">Elaiza Joy Castor</h3>
-                        <p class="team-role">Head Barista</p>
-                        <p class="team-description">Creates paw-some latte art</p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <img src="mi.webp" alt="Baker" class="team-photo">
-                        <h3 class="team-name">Elyza Dizon</h3>
-                        <p class="team-role">Pet Treat Chef</p>
-                        <p class="team-description">Makes treats pets go crazy for</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="1.gif" alt="Founder" class="team-photo">
-                        <h3 class="team-name">Denosta Norwellyn Grace</h3>
-                        <p class="team-role">Smoothie & Cold Drinks Specialist</p>
-                        <p class="team-description">Makes refreshing iced coffees, frappes, and coolers.</p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <img src="marisol.jpg" alt="Barista" class="team-photo">
-                        <h3 class="team-name">Marisol Plaquie Pagauitan</h3>
-                        <p class="team-role">Pastry & Snacks Expert</p>
-                        <p class="team-description">Handles muffins, cookies, cakes, and all the cute treats.</p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <img src="me.jpg" alt="Baker" class="team-photo">
-                        <h3 class="team-name">Jericho Lejano</h3>
-                        <p class="team-role">Website Maintenance</p>
-                        <p class="team-description">Fixes buttons, links, and keeps everything running smoothly.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="james3.jpg" alt="Founder" class="team-photo">
-                        <h3 class="team-name">James Corporal</h3>
-                        <p class="team-role">Order Runner</p>
-                        <p class="team-description">Quickly delivers orders from the counter to the customers.</p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <img src="calagos.jpg" alt="Barista" class="team-photo">
-                        <h3 class="team-name">Jheno Vien Calagos</h3>
-                        <p class="team-role">Checkout & Payments Master</p>
-                        <p class="team-description">Handles transactions and online orders with speed and cheer.</p>
-                    </div>
-                    
-                    <div class="team-member">
-                        <img src="rai.gif" alt="Baker" class="team-photo">
-                        <h3 class="team-name">Rainiel John S. Pugoso</h3>
-                        <p class="team-role">Shop Tidiness Supervisor</p>
-                        <p class="team-description">Keeps everything clean, cozy, and shiny.</p>
-                    </div>
-            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="contact-container">
             <h1 class="page-title">Contact Us</h1>
-            
+                <div class="cat-7">
+                    <img src="cat7.png" alt="Cat">
+                </div>
             <div class="contact-grid">
                 <div class="contact-form-card">
                     <h2 class="section-title">Get in Touch</h2>
@@ -283,6 +437,19 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="dog-1">
+                        <img src="do.png" alt="Dog">
+                    </div>
+                    <div class="cat">
+                        <img src="cat.png" alt="Cat">
+                    </div>
+                    <div class="cat-2">
+                        <img src="cat2.png" alt="Cat">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer class="footer">
@@ -315,8 +482,98 @@
                     <a href="#">Terms of Service</a>
                 </div>
             </div>
+            <div class="cat-3">
+                <img src="cat3.png" alt="Cat">
+            </div>
         </div>
     </footer>
+
+    <div id="customize-modal" class="customize-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1001; justify-content: center; align-items: center;">
+        <div class="customize-modal-content" style="background: white; padding: 20px; border-radius: 8px; max-width: 400px; width: 90%;">
+            <h2 id="customize-title">Customize Your Item</h2>
+            <form id="customize-form">
+                <div class="form-group">
+                    <label>Size:</label>
+                    <select id="size-select" class="form-input">
+                        <option value="small" data-multiplier="1">Small (Base Price)</option>
+                        <option value="medium" data-multiplier="1.2">Medium (+20%)</option>
+                        <option value="large" data-multiplier="1.5">Large (+50%)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Add-ons:</label>
+                    <div>
+                        <input type="checkbox" id="addon-cream" data-price="50"> Extra Whipped Cream (+₱50)<br>
+                        <input type="checkbox" id="addon-bacon" data-price="75"> Bacon Bits (+₱75)<br>
+                        <input type="checkbox" id="addon-catnip" data-price="60"> Catnip Sprinkles (+₱60)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Special Notes:</label>
+                    <textarea id="notes" rows="2" class="form-input" placeholder="e.g., No sugar"></textarea>
+                </div>
+                <div id="customize-price" style="font-weight: bold; margin-top: 10px;">Total: ₱0.00</div>
+                <div style="margin-top: 20px;">
+                    <button type="button" id="add-customized-btn" style="background: #d97706; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer;">Add to Cart</button>
+                    <button type="button" id="cancel-customize-btn" style="background: #f44336; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; margin-left: 10px;">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<div id="cart-modal" class="cart-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+    <div class="cart-modal-content" style="background: white; padding: 20px; border-radius: 8px; max-width: 500px; width: 90%; max-height: 80%; overflow-y: auto;">
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items">
+        </div>
+        <div id="cart-total" class="cart-total" style="margin-top: 20px; font-weight: bold;">
+            Total: ₱0.00
+        </div>
+        <div style="margin-top: 20px;">
+            <button id="checkout-btn" style="background: #d97706; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer;">Checkout</button>
+            <button id="clear-cart-btn" style="background: #f44336; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; margin-left: 10px;">Clear Cart</button>
+            <button id="close-cart-btn" style="background: #5c3101; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; margin-left: 10px;">Close</button>
+        </div>
+    </div>
+</div>
+
+<div id="checkout-modal" class="checkout-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1001; justify-content: center; align-items: center;">
+    <div class="checkout-modal-content" style="background: white; padding: 20px; border-radius: 8px; max-width: 600px; width: 90%; max-height: 80%; overflow-y: auto;">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <h3>Personal Details</h3>
+            <input type="text" id="checkout-name" placeholder="Full Name" required>
+            <input type="text" id="checkout-address" placeholder="Delivery Address" required>
+            <input type="tel" id="checkout-phone" placeholder="Phone Number" required>
+            
+            <h3>Order Summary</h3>
+            <div id="checkout-items"></div>
+            <div id="checkout-total" style="font-weight: bold; margin-top: 10px;"></div>
+            
+            <h3>Payment Method</h3>
+            <select id="payment-method" required>
+                <option value="">Select Payment Method</option>
+                <option value="cash">Cash on Delivery</option>
+                <option value="online">Online Payment</option>
+            </select>
+            
+            <div style="margin-top: 20px;">
+                <button type="submit" style="background: #d97706; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; margin-left: 150px;">Complete Checkout</button>
+                <button type="button" id="cancel-checkout-btn" style="background: #f44336; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; margin-left: 10px;">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="order-completed-modal" class="order-completed-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1002; justify-content: center; align-items: center;">
+    <div class="order-completed-modal-content" style="background: white; padding: 30px; border-radius: 10px; max-width: 400px; width: 90%; text-align: center;">
+        <h2 style="color: #d97706;">Order Completed!</h2>
+        <p>Thank you for your order. Your items will be prepared shortly.</p>
+        <button id="close-order-modal-btn" style="background: #d97706; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 20px;">OK</button>
+    </div>
+</div>
+
+
     <script src="script.js"></script>
 </body>
 </html>

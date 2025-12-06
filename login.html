@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wave-divider">
+            <svg viewBox="0 0 300 800" preserveAspectRatio="none">
+                <path d="M150 0 
+                         C 180 150, 120 250, 150 400
+                         C 180 550, 120 650, 150 800
+                         L 0 800 L 0 0 Z" />
+            </svg>
+        </div>
+        <div class="left">
+            <div class="illustration">
+                <img src="logo.png" alt="Coffee Cup" />
+            </div>
+            <h2>WonderPets Brew Haven</h2>
+            <p>“Serving Coffee with a Side of Love and Paws”</p>
+        </div>
+
+        <div class="right">
+            <div id="login-form" class="form-container active">
+                <h1>Welcome Back, <br> <span>Please login to your account</span></h1>
+
+                <form id="loginForm">
+                    <label>Username</label>
+                    <input type="text" placeholder="Donald Duck" required />
+
+                    <label>Password</label>
+                    <div class="password-container">
+                        <input type="password" id="login-password" placeholder="••••••••" required />
+                        <span class="toggle-password" onclick="togglePassword('login-password')">👁️</span>
+                    </div>
+
+                    <div class="options">
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="signin">Sign in</button>
+                    <div class="message" id="login-message"></div>
+                </form>
+
+                <p class="new">New Coffeelover? <a href="#" id="show-register">Create Account</a></p>
+            </div>
+
+            <div id="register-form" class="form-container">
+                <h2>Join Us, <br> <span>Create your account</span></h2>
+
+                <form id="registerForm">                    
+                    <label>Username</label>
+                    <input type="text" placeholder="Kristian" required />
+
+                    <label>Email</label>
+                    <input type="email" placeholder="Kristian@example.com" required />
+
+                    <label>Password</label>
+                    <div class="password-container">
+                        <input type="password" id="register-password" placeholder="••••••••" required />
+                        <span class="toggle-password" onclick="togglePassword('register-password')">👁️</span>
+                    </div>
+
+                    <label>Confirm Password</label>
+                    <div class="password-container">
+                        <input type="password" id="confirm-password" placeholder="••••••••" required />
+                        <span class="toggle-password" onclick="togglePassword('confirm-password')">👁️</span>
+                    </div>
+
+                    <button type="submit" class="signin">Create Account</button>
+                    <div class="message" id="register-message"></div>
+                </form>
+
+                <p class="new">Already have an account? <a href="#" id="show-login">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
